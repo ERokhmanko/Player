@@ -42,8 +42,8 @@ android {
 
 dependencies {
 
-//    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1' //отвечает за стиль Material на устройствах с API ниже 21
     implementation 'com.google.android.material:material:1.5.0'// для кнопки fab и кнопок
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'// для размешения кнопок в хаотичном порядке
     implementation "com.squareup.retrofit2:retrofit:2.9.0" // для запросов Api

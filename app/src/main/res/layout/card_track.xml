@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.ListOfPlacesFragment">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/play_pause"
@@ -22,8 +21,8 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/menu"
         style="@style/Widget.AppCompat.ElementsCardTrack"
-        android:layout_width="37dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         app:icon="@drawable/ic_baseline_more_horiz_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

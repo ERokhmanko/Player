@@ -24,7 +24,7 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
 
     init {
       loadTracks()
-    } //TODO ??
+    }
 
     private fun loadTracks() = viewModelScope.launch {
         val album = repository.getAll()
@@ -32,28 +32,32 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
 
     }
 
-//    private fun loadTracks() = viewModelScope.launch {
-//        try {
-//            val response = Api.retrofitService.getAll()
-//            if (response.isSuccessful) {
-//                _data.value = response.body()
-//            }
-//        } catch (e: Exception) {
-//        }
-//    }
-
     fun play(id: Long) {
         trackPosn.value = id
+    }
 
-//        _data.value = data.value?.let { album ->
-//            album.copy(tracks = album.tracks.map { track ->
-//                if (id == track.id) {
-//                    track.copy(running = true)
-//                } else {
-//                    track.copy(running = false)
-//                }
-//            })
-//        }
+    fun imagePlay(id: Long){
+        _data.value = data.value?.let { album ->
+            album.copy(tracks = album.tracks.map { track ->
+                if (id == track.id) {
+                    track.copy(running = false)
+                } else {
+                    track.copy(running = false)
+                }
+            })
+        }
+  }
+
+    fun imagePause(id: Long){
+        _data.value = data.value?.let { album ->
+            album.copy(tracks = album.tracks.map { track ->
+                if (id == track.id) {
+                    track.copy(running = true)
+                } else {
+                    track.copy(running = false)
+                }
+            })
+        }
     }
 
 }

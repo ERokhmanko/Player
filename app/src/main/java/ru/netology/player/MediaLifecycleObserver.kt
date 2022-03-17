@@ -12,7 +12,7 @@ class MediaLifecycleObserver : LifecycleEventObserver {
         player?.setOnPreparedListener {
             it.start()
         }
-        player?.prepareAsync()
+        player?.prepare()
     }
 
 
@@ -20,8 +20,8 @@ class MediaLifecycleObserver : LifecycleEventObserver {
         when (event) {
             Lifecycle.Event.ON_PAUSE -> player?.pause()
             Lifecycle.Event.ON_STOP -> {
-                player?.release()
-                player = null
+                player?.stop()
+                player?.reset()
             }
             Lifecycle.Event.ON_DESTROY -> source.lifecycle.removeObserver(this)
             else -> Unit
