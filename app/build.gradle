@@ -49,6 +49,6 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.9.0" // для запросов Api
     implementation "com.squareup.retrofit2:converter-gson:2.9.0" //для преобразования json
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1" //для обращения к Api в viewmodel
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"// для подключения вьюМодели во фрагменте и навигации в нем
+    implementation "androidx.activity:activity-ktx:1.4.0"// для подключения вьюМодели во фрагменте
 
 }
